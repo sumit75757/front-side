@@ -1,0 +1,11 @@
+<div >
+<nav role="navigation">
+    <ul>
+      <li *ngFor="let i of catogory" ><a href="#">{{i.name}}</a>
+        <ul class="dropdown">
+          <li *ngFor="let sub of i.subcaetogorys"><a href="#" >{{sub.name}}</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>

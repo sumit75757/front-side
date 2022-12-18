@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { SignupComponent } from './auth1/signup/signup.component';
+import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: NavbarComponent,
+    children: [
+      {
+        path: '',
+        component: HomepageComponent,
+      },
+    ],
+  },
+  {
+    path:"auth",component:SignupComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
