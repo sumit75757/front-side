@@ -8,10 +8,14 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 const routes: Routes = [
   {
     path: '',
-    component: NavbarComponent,
+    redirectTo: 'homw',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     children: [
       {
-        path: '',
+        path: 'home',
         component: HomepageComponent,
       },
     ],
