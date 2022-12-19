@@ -1,9 +1,9 @@
-<div >
-<nav role="navigation">
+<div class="m-1" >
+<nav role="navigation" class="shadow-lg  rounded">
     <ul>
-      <li *ngFor="let i of catogory" ><a href="#">{{i.name}}</a>
+      <li *ngFor="let i of catogory" >{{i.name}}
         <ul class="dropdown">
-          <li *ngFor="let sub of i.subcaetogorys"><a href="#" >{{sub.name}}</a></li>
+          <li *ngFor="let sub of i.subcaetogorys">{{sub.name}}</li>
         </ul>
       </li>
     </ul>
