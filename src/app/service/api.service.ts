@@ -8,9 +8,9 @@ import { environment } from '../../../environments/environment';
 export class ApiService {
 
   token:any= localStorage.getItem('token');
-  baseurl = environment.baseurl
+  // baseurl = environment.baseurl
 
-  //baseurl:any='http://localhost:4000/';
+  baseurl:any='http://localhost:4000/';
    //baseurl:any='https://localhost:80/';
 
   constructor(private http:HttpClient) { }

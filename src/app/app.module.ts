@@ -10,13 +10,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { SignupComponent } from './auth1/signup/signup.component';
 import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
+import { FooterComponent } from './layout/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomepageComponent,
     SignupComponent,
-    CatgorynavComponent
+    CatgorynavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
