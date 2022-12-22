@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { ProductInfo } from '../Interface/data-type';
 
 @Injectable({
   providedIn: 'root'
@@ -45,5 +46,7 @@ export class ApiService {
   {
     return this.http.get(this.baseurl + 'api/catogory',{headers:this.header});
   }
+
+
 
 }

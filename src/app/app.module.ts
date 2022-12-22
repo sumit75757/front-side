@@ -11,6 +11,8 @@ import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { SignupComponent } from './auth1/signup/signup.component';
 import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ProductDetailsComponent } from './layout/product-details/product-details.component';
+import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { FooterComponent } from './layout/footer/footer.component';
     HomepageComponent,
     SignupComponent,
     CatgorynavComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
