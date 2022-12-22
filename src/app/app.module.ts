@@ -11,6 +11,9 @@ import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { SignupComponent } from './auth1/signup/signup.component';
 import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { BannerComponent } from './layout/banner/banner.component';
+import { ProductListComponent } from './layout/product-list/product-list.component';
+import { AddComponent } from './layout/add/add.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { FooterComponent } from './layout/footer/footer.component';
     HomepageComponent,
     SignupComponent,
     CatgorynavComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent,
+    ProductListComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
