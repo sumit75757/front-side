@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import{MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,12 @@ import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ProductDetailsComponent } from './layout/product-details/product-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
+
+import { BannerComponent } from './layout/banner/banner.component';
+import { ProductListComponent } from './layout/product-list/product-list.component';
+import { AddComponent } from './layout/add/add.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +29,17 @@ import { ContactComponent } from './pages/contact/contact.component';
     CatgorynavComponent,
     FooterComponent,
     ProductDetailsComponent,
-    ContactComponent
+    ContactComponent,
+    BannerComponent,
+    ProductListComponent,
+    AddComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,ReactiveFormsModule 
+    FormsModule,ReactiveFormsModule,
+    MatInputModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

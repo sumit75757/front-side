@@ -11,7 +11,10 @@ export class ProductDetailsComponent {
   //  product : ProductInfo[] = []
   constructor(private api : ApiService){
 
-
+    this.api.product().subscribe((data : any) =>{
+      console.warn(data);
+      // this.productdetails = data.data
+    })
 
 
   }
