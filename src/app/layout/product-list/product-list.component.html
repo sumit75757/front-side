@@ -4,20 +4,23 @@
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-mdb-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-
+                    <ul *ngFor="let  data of productdetails" class="list-unstyled mb-0">
                     <!--PRODUCT START  -->
+                    <li>
                     <div class=" main col-lg-4 col-md-12 mb-4 ">
                         <div class="card shadow p-3 mb-5 bg-body rounded ">
-                            <img src="https://www.transparentpng.com/thumb/watch/aqd9mj-tech-black-watch-transparent-png.png"
+                            <img src="{{imgeurl + data.productImage[0]}}" alt="image 1"
                                 class="product-img " style="width: 200px; height: 200px;">
                             <a></a>
                             <div class="card-body">
                                 <div class="product-details p-2 m-2">
                                     <div class="d-flex justify-content-between mb-3">
-                                        <h5 class="mt-0 mb-0">Smart Watch</h5>
+                                        <h5 class="mt-0 mb-0">{{data.catogory}}</h5>
+
+                                        <p>{{data.productInfo}}</p>
                                     </div>
                                     <div class="fw-semibold text-center">
-                                        Price:- $19.99
+                                        Price:- {{data.price}}
                                     </div>
                                 </div>
                                 <div class="product-rating">
@@ -38,10 +41,11 @@
                             </div>
                         </div>
                     </div>
-                    
+                    </li>
+                    </ul>
                     <!-- FINISH PRODUCT -->
 
-                    
+
 
  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                         data-bs-slide="prev">

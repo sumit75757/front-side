@@ -1,0 +1,27 @@
+.map-container iframe{
+  left:0;
+  top:0;
+  height:80%;
+  width:100%;
+  position:absolute;
+  }
+
+  input{
+    box-shadow: 1px rgb(60, 25, 219);
+    border-bottom:1px solid rgb(10, 34, 222);
+    -webkit-box-shadow: 0 1px 0 0 #171fc4;
+    border-left: white;
+    border-right: white;
+    border-top: white;
+
+  }
+
+  textarea
+  {
+    box-shadow: 1px rgb(8, 63, 191);
+    border-bottom:1px solid rgb(10, 34, 222);
+    -webkit-box-shadow: 0 1px 0 0 #171fc4;
+    border-left: white;
+    border-right: white;
+    border-top: white;
+  }
