@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './auth1/signup/signup.component';
 import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
@@ -33,5 +33,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppRoutingModule {}
