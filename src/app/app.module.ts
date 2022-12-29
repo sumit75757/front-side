@@ -17,6 +17,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { ProductListComponent } from './layout/product-list/product-list.component';
 import { AddComponent } from './layout/add/add.component';
+import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { AddComponent } from './layout/add/add.component';
     BannerComponent,
     ProductListComponent,
     AddComponent,
+    LeftSidebarComponent,
   ],
   imports: [
     BrowserModule,
