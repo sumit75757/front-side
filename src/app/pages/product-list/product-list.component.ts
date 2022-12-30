@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {ApiService} from '../../service/api.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -11,10 +12,33 @@ export class ProductListComponent {
   imgeurl = "http://localhost:4000"
 
   constructor(private api:ApiService){
-
     this.api.product().subscribe((data : any) =>{
       console.warn(data);
        this.productdetails = data.data
     })
+  }
+  customOptions: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    navText: ["<", '>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
   }
 }

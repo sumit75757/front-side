@@ -15,10 +15,11 @@ import { ProductDetailsComponent } from './layout/product-details/product-detail
 import { ContactComponent } from './pages/contact/contact.component';
 
 import { BannerComponent } from './layout/banner/banner.component';
-import { ProductListComponent } from './layout/product-list/product-list.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
 import { AddComponent } from './layout/add/add.component';
 import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.component';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SrinkPipe } from './pipe/srink.pipe';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,15 @@ import { LeftSidebarComponent } from './layout/left-sidebar/left-sidebar.compone
     ProductListComponent,
     AddComponent,
     LeftSidebarComponent,
+    SrinkPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,ReactiveFormsModule,
+    CarouselModule
+
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

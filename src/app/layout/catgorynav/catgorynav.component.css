@@ -39,7 +39,7 @@ li a:hover {
   font-size: 17px;
   border-bottom:1px solid rgb(48, 48, 104) ;
   color:#0275d8 ;
-  /* z-index: 1000000; */
+  z-index: 1000000;
 }
 
 li:hover {
@@ -48,7 +48,7 @@ li:hover {
   font-size: 17px;
   border-bottom:2px solid rgb(137, 137, 255) ;
   color:#0275d8 ;
-  /* z-index: 10000; */
+  z-index: 10000;
 }
 ul li ul {
   background: rgb(255, 255, 255);
@@ -69,7 +69,7 @@ ul li ul:hover {
   visibility: visible ;
   opacity: 1;
   display: block;
-  /* z-index: 10000; */
+  z-index: 10000;
 }
 ul li ul a :hover {
   color: #0275d8;
