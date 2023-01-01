@@ -33,3 +33,14 @@
   flex-direction: column;
 
 } */
+samp{
+  margin-bottom: 4px;
+  display: block;
+  font-weight: 300;
+  color: #a2a2a2;
+}
+.froductname{
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+font-weight: 500;}

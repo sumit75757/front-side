@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {ApiService} from '../../service/api.service';
+import { ApiService } from '../../service/api.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,13 +9,25 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class ProductListComponent {
 
-  productdetails : any;
+  productdetails: any;
   imgeurl = "http://localhost:4000"
 
-  constructor(private api:ApiService){
-    this.api.product().subscribe((data : any) =>{
-      console.warn(data);
-       this.productdetails = data.data
+  constructor(private api: ApiService, private activeroute: ActivatedRoute) {
+    activeroute.params.subscribe((res: any) => {
+      if (res.catogory != null) {
+        api.catserch(res).subscribe((res: any) => {
+          this.productdetails = res
+        })
+      }
+      else {
+        this.getprod()
+      }
+
+    })
+  }
+  getprod() {
+    this.api.product().subscribe((data: any) => {
+      this.productdetails = data.data.filter((d:any)=> d.onhome == true)
     })
   }
   customOptions: OwlOptions = {
@@ -23,6 +36,7 @@ export class ProductListComponent {
     touchDrag: true,
     pullDrag: true,
     dots: true,
+    animateIn : true,
     navSpeed: 700,
     navText: ["<", '>'],
     responsive: {

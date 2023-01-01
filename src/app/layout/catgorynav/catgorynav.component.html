@@ -3,7 +3,7 @@
     <ul>
       <li *ngFor="let i of catogory" >{{i.name}}
         <ul class="dropdown">
-          <li *ngFor="let sub of i.subcaetogorys">{{sub.name}}</li>
+          <li *ngFor="let sub of i.subcaetogorys" (click)="navigate(sub.name)" > {{sub.name}} </li>
         </ul>
       </li>
     </ul>

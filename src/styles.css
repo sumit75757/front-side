@@ -3,3 +3,6 @@
 @import 'node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default'; */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.owl-carousel.owl-item {
+    width: 350px !important;
+  }

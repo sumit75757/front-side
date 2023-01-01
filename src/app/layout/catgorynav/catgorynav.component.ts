@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -9,12 +10,11 @@ import { ApiService } from 'src/app/service/api.service';
 })
 export class CatgorynavComponent {
   catogory: any;
-  constructor(private api : ApiService) {
+  constructor(private api : ApiService,private route :Router) {
     this.api.catogory().subscribe((res:any)=>{
      this.catogory = res.data
     })
    }
-
 
   //  left() {
   //    document.getElementById('container').scrollLeft += 20;
@@ -22,5 +22,8 @@ export class CatgorynavComponent {
   //  right() {
   //    document.getElementById('container').scrollLeft -= 20;
   //  };
+  navigate(cat:any){
+    this.route.navigate(["product/"+cat])
+  }
 }
 

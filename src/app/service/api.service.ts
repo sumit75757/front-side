@@ -46,7 +46,11 @@ export class ApiService {
   {
     return this.http.get(this.baseurl + 'api/catogory',{headers:this.header});
   }
-
+  catserch(serh:any)
+  {
+    
+    return this.http.get(this.baseurl + 'api/serche/catogory/'+serh.catogory);
+  }
 
 
 }
