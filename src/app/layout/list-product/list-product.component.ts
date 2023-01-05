@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/service/api.service';
 
 @Component({
@@ -9,11 +9,17 @@ import { ApiService } from 'src/app/service/api.service';
 })
 export class ListProductComponent {
   productdetails:any
-  constructor(private api: ApiService, private activeroute: ActivatedRoute) {
+  imgeurl = "http://localhost:4000"
+
+  constructor(private api: ApiService, private activeroute: ActivatedRoute ,private route : Router ) {
     activeroute.params.subscribe((res: any) => {
         api.catserch(res).subscribe((res: any) => {
-          this.productdetails = res
+          this.productdetails = res   
+          debugger
         })
     })
+  }
+  navigate(data:any){
+    this.route.navigate(['view/'+data._id])
   }
 }

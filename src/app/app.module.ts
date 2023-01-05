@@ -22,6 +22,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SrinkPipe } from './pipe/srink.pipe';
 import { ListProductComponent } from './layout/list-product/list-product.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ServicehomeComponent } from './layout/servicehome/servicehome.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     LeftSidebarComponent,
     SrinkPipe,
     ListProductComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ServicehomeComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,15 @@ import {ProductInfo} from '../../Interface/data-type';
 })
 export class HomepageComponent {
   posts:ProductInfo[] = [];
-  constructor(private api:ApiService){
+  prod:any = true
+  serv:any = false
 
+  constructor(private api:ApiService){
+  }
+  product(){
+    this.prod = true
+  }
+  service(){
+    this.prod = false
   }
 }

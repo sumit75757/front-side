@@ -44,3 +44,16 @@ white-space: nowrap;
 text-overflow: ellipsis;
 overflow: hidden;
 font-weight: 500;}
+h2{
+  font-family:  sans-serif;
+  color: rgb(79, 79, 79);
+  font: bold;
+}
+.roww{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}

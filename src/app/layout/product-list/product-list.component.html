@@ -1,14 +1,72 @@
-<div class="container-lg">
+<div class="container">
   <h2>Keep shopping for</h2>
+  <div class="row"  *ngIf="!productdetails">
+    <div class="col">
+      <div>
+        <div class="card" aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card" aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+    </div>
+  </div>
   <owl-carousel-o [options]="customOptions">
-    <ng-container *ngFor="let data of productdetails">
+    <ng-container  *ngFor="let data of productdetails">
       <ng-template carouselSlide>
-        <div class="card shadow bg-body rounded" style="width: 15rem">
+        <div class="card shadow bg-body  p-2 rounded" style="width: 18rem">
           <img
-            src="{{ imgeurl + data.productImage[0] }}"
+            src="{{imgeurl + data.productImage[0]}}"
             class="card-img-top"
-            alt="..."
-            style="width: 15rem;"
+            alt="..." 
+            style="width: 17rem;"
           />
           <div class="card-body">
             <div class="product-details">
@@ -17,6 +75,137 @@
                 ><br />
                 <h4 class="froductname">{{ data.productInfo | srink }}</h4>
               </div>
+            </div>
+            <div class="d-flex  justify-content-between">
+                <div class="product-rating">
+                  <div class="d-flex flex-row">
+                    <div class="text-warning text-centers mb-1 me-2">
+                      <i
+                        class="fa fa-star"
+                        style="width: 25px; font-size: x-large"
+                      ></i>
+                      <i
+                        class="fa fa-star"
+                        style="width: 25px; font-size: x-large"
+                      ></i>
+                      <i
+                        class="fa fa-star"
+                        style="width: 25px; font-size: x-large"
+                      ></i>
+                      <i
+                        class="fa fa-star"
+                        style="width: 25px; font-size: x-large"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              <div class="fw-semibold text-center">₹{{ data.price }}</div>
+            </div>
+            <div class="product-footer mt-1">
+              <button type="button" class="btn btn-primary w-100  btn-lg btn-block">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+
+</div>
+<div class="container mt-4">
+  <h2>Services</h2>
+  <div class="row"  *ngIf="!service">
+    <div class="col">
+      <div>
+        <div class="card " aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+        <div class="card" aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" aria-hidden="true">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <owl-carousel-o [options]="customOptions" *ngIf="service">
+    <ng-container *ngFor="let data of service">
+      <ng-template carouselSlide>
+        <div class="card p-2 shadow bg-body rounded" style="width: 18rem">
+          <img
+            src="{{ imgeurl + data.serviceImage[0] }}"
+            class="card-img-top"
+            alt="..."
+            style="width: 17rem;"
+          />
+          <div class="card-body">
+            <div class="product-details">
+              <div class="mb-1">
+                <span class="mt-0 mb-0">{{ data.serviceName }}</span
+                ><br />
+                <h4 class="froductname">{{ data.serviceInfo  | srink }}</h4>
+              </div>
+            </div>
+            <div class="roww text-center">
+              <div class="col">
+                <small class="">{{data.startTime}}</small>
+                <pre class="mb-0">Start Time</pre>
+              </div>
+              <div class="col">
+                <small class="mb-0">To</small>
+              </div>
+              <div class="col">
+                <small class="mb-1">{{data.closeTime}}</small>
+                <pre class="mb-0">Close Time</pre>
+              </div>
+            </div>
+            <div class="text-center">
+              <h6 class="mb-1">678</h6>
+              <p class="mb-0">Following</p>
             </div>
             <div class="d-flex  justify-content-between">
                 <div class="product-rating">

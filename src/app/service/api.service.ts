@@ -38,10 +38,7 @@ export class ApiService {
   {
     return this.http.get(this.baseurl+ 'api/catogory', {headers:this.header});
   }
-  product()
-  {
-    return this.http.get(this.baseurl + 'api/product',{headers:this.header});
-  }
+ 
   catogory()
   {
     return this.http.get(this.baseurl + 'api/catogory',{headers:this.header});
@@ -51,6 +48,18 @@ export class ApiService {
     
     return this.http.get(this.baseurl + 'api/serche/catogory/'+serh.catogory);
   }
-
+  product(id?:any)
+  {
+    if (id) {
+      return this.http.get(this.baseurl + 'api/product/'+id,{headers:this.header});
+    }
+    else{
+      return this.http.get(this.baseurl + 'api/product',{headers:this.header});
+    }
+  }
+  service()
+  {
+    return this.http.get(this.baseurl + 'api/service',{headers:this.header});
+  }
 
 }

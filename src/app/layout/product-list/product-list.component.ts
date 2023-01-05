@@ -10,24 +10,23 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductListComponent {
 
   productdetails: any;
+  service :any
   imgeurl = "http://localhost:4000"
 
   constructor(private api: ApiService, private activeroute: ActivatedRoute) {
-    activeroute.params.subscribe((res: any) => {
-      if (res.catogory != null) {
-        api.catserch(res).subscribe((res: any) => {
-          this.productdetails = res
-        })
-      }
-      else {
+ 
         this.getprod()
-      }
-
-    })
+    this.getservice()
   }
   getprod() {
     this.api.product().subscribe((data: any) => {
       this.productdetails = data.data.filter((d:any)=> d.onhome == true)
+    })
+  }
+  getservice() {
+    this.api.service().subscribe((data: any) => {
+      this.service = data.result
+
     })
   }
   customOptions: OwlOptions = {
@@ -38,7 +37,7 @@ export class ProductListComponent {
     dots: true,
     animateIn : true,
     navSpeed: 700,
-    navText: ["<", '>'],
+    navText: ["<<", '>>'],
     responsive: {
       0: {
         items: 1

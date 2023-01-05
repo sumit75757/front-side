@@ -24,6 +24,10 @@ const routes: Routes = [
       {
         path : 'product/:catogory',
         component:ListProductComponent ,
+      },
+      {
+        path : 'view/:id',
+        component:ProductDetailsComponent ,
       }
     ],
   },
