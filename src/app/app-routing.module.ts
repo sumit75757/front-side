@@ -26,13 +26,12 @@ const routes: Routes = [
         component:ListProductComponent ,
       },
       {
-<<<<<<< HEAD
         path : 'view/:id',
         component:ProductDetailsComponent ,
-=======
+      },
+      {
         path:'shopping-cart' ,
         component:CartComponent,
->>>>>>> b8c4dc80424718b1f7be272870fd64a2b6501de7
       }
     ],
   },

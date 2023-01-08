@@ -22,11 +22,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SrinkPipe } from './pipe/srink.pipe';
 import { ListProductComponent } from './layout/list-product/list-product.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-<<<<<<< HEAD
 import { ServicehomeComponent } from './layout/servicehome/servicehome.component';
-=======
 import { CartComponent } from './layout/cart/cart.component';
->>>>>>> b8c4dc80424718b1f7be272870fd64a2b6501de7
 
 @NgModule({
   declarations: [
@@ -45,11 +42,8 @@ import { CartComponent } from './layout/cart/cart.component';
     SrinkPipe,
     ListProductComponent,
     AboutUsComponent,
-<<<<<<< HEAD
-    ServicehomeComponent
-=======
-    CartComponent
->>>>>>> b8c4dc80424718b1f7be272870fd64a2b6501de7
+    ServicehomeComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
