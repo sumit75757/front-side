@@ -9,11 +9,11 @@ import { ApiService } from './service/api.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { SignupComponent } from './auth1/signup/signup.component';
-import { CatgorynavComponent } from './layout/catgorynav/catgorynav.component';
+// import { CatgorynavComponent } from './layout/newcategorynav/';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ProductDetailsComponent } from './layout/product-details/product-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
-
+import{RouteConfigLoadEnd, ROUTER_CONFIGURATION} from '@angular/router';
 import { BannerComponent } from './layout/banner/banner.component';
 import { ProductListComponent } from './layout/product-list/product-list.component';
 import { AddComponent } from './layout/add/add.component';
@@ -22,6 +22,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SrinkPipe } from './pipe/srink.pipe';
 import { ListProductComponent } from './layout/list-product/list-product.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { CartComponent } from './layout/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     NavbarComponent,
     HomepageComponent,
     SignupComponent,
-    CatgorynavComponent,
+    // CatgorynavComponent,
     FooterComponent,
     ProductDetailsComponent,
     ContactComponent,
@@ -39,14 +40,16 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     LeftSidebarComponent,
     SrinkPipe,
     ListProductComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    // RouteConfigLoadEnd,
 
   ],
   providers: [ApiService],
